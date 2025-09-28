@@ -1,8 +1,8 @@
 cask "agent-sessions" do
-  version "1.0"
-  sha256 "c36036043031940a4c87b3bb903b8d245bee80bac2486bc85419223db0cc0933"
+  version "1.1"
+  sha256 "cdbc4b5eeac8b443bc34ded656040d79bab808d10a1dc83177dee13a9c88f858"
 
-  url "https://github.com/jazzyalex/agent-sessions/releases/download/v#{version}/AgentSessions.dmg",
+  url "https://github.com/jazzyalex/agent-sessions/releases/download/v#{version}/AgentSessions-#{version}.dmg",
       verified: "github.com/jazzyalex/agent-sessions/"
   name "Agent Sessions"
   desc "macOS utility to browse and search Codex CLI session logs"
@@ -11,7 +11,7 @@ cask "agent-sessions" do
   app "AgentSessions.app"
 
   zap trash: [
-    "~/Library/Preferences/com.yourdomain.AgentSessions.plist",
+    "~/Library/Preferences/com.triada.AgentSessions.plist",
     "~/Library/Application Support/AgentSessions",
   ]
 end
