@@ -15,7 +15,7 @@ cask "agent-sessions" do
 
   depends_on macos: ">= :sonoma"
 
-  app "Agent Sessions.app"
+  app "AgentSessions.app", target: "AgentSessions.app"
 
   zap trash: [
     "~/Library/Application Support/Agent Sessions",
