@@ -1,6 +1,6 @@
 cask "agent-sessions" do
-  version "2.4"
-  sha256 "95380404e700bc773ca797a4433875c6b5c73a04892f408900cc15f4c23cf357"
+  version "2.5"
+  sha256 "fb2f4f8059209c713d224d35fbe988b267128588f9a142259dfcc0e6cdbd9ff6"
 
   url "https://github.com/jazzyalex/agent-sessions/releases/download/v#{version}/AgentSessions-#{version}.dmg",
       verified: "github.com/jazzyalex/agent-sessions/"
@@ -18,8 +18,7 @@ cask "agent-sessions" do
   app "AgentSessions.app", target: "AgentSessions.app"
 
   zap trash: [
-    "~/Library/Application Support/Agent Sessions",
     "~/Library/Preferences/com.triada.AgentSessions.plist",
-    "~/Library/Saved Application State/com.triada.AgentSessions.savedState",
+    "~/Library/Application Support/com.triada.AgentSessions",
   ]
 end
