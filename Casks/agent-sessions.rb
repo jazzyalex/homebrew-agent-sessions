@@ -2,9 +2,10 @@ cask "agent-sessions" do
   version "2.6"
   sha256 "bcdaae9edc3c25a3f1e3bff89f68cdd2bf52db848341499fb8027aa5c68afed9"
 
-  url "https://github.com/jazzyalex/agent-sessions/releases/download/v#{version}/AgentSessions-#{version}.dmg"
+  url "https://github.com/jazzyalex/agent-sessions/releases/download/v#{version}/AgentSessions-#{version}.dmg",
+      verified: "github.com/jazzyalex/agent-sessions/"
   name "Agent Sessions"
-  desc "Session browser for Codex CLI, Claude Code and Gemini CLI"
+  desc "Unified session browser for Codex CLI, Claude Code, and Gemini CLI (read-only)"
   homepage "https://jazzyalex.github.io/agent-sessions/"
 
   livecheck do
@@ -12,10 +13,13 @@ cask "agent-sessions" do
     strategy :github_latest
   end
 
-  app "Agent Sessions.app"
+  depends_on macos: ">= :sonoma"
+
+  app "AgentSessions.app"
 
   zap trash: [
+    "~/Library/Application Support/Agent Sessions",
     "~/Library/Preferences/com.triada.AgentSessions.plist",
-    "~/Library/Caches/com.triada.AgentSessions",
+    "~/Library/Saved Application State/com.triada.AgentSessions.savedState",
   ]
 end
