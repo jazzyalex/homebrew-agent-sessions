@@ -1,6 +1,6 @@
 cask "agent-sessions" do
-  version "2.6"
-  sha256 "bcdaae9edc3c25a3f1e3bff89f68cdd2bf52db848341499fb8027aa5c68afed9"
+  version "2.6.1"
+  sha256 "706336761e38091a37d75835997a1a63ffe34974202b60fe7b405acf92f1324b"
 
   url "https://github.com/jazzyalex/agent-sessions/releases/download/v#{version}/AgentSessions-#{version}.dmg",
       verified: "github.com/jazzyalex/agent-sessions/"
@@ -15,7 +15,7 @@ cask "agent-sessions" do
 
   depends_on macos: ">= :sonoma"
 
-  app "AgentSessions.app"
+  app "AgentSessions.app", target: "AgentSessions.app"
 
   zap trash: [
     "~/Library/Application Support/Agent Sessions",
