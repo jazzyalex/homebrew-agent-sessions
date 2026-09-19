@@ -1,6 +1,6 @@
 cask "agent-sessions" do
-  version "5.4"
-  sha256 "80161b1cf59fd6aa060e6b7a2389540e4e313648cd51992660714e4391018eef"
+  version "5.5"
+  sha256 "9087e99547f6deed4a705ca7f372c72584353924483adc06c2f147a554142ae7"
 
   url "https://github.com/jazzyalex/agent-sessions/releases/download/v#{version}/AgentSessions-#{version}.dmg",
       verified: "github.com/jazzyalex/agent-sessions/"
