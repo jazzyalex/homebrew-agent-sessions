@@ -2,8 +2,7 @@ cask "agent-sessions" do
   version "6.0.1"
   sha256 "464a91b24454e1f483925da03e59469e97c4f275d1d24e2c1ee7ed1058d25532"
 
-  url "https://github.com/jazzyalex/agent-sessions/releases/download/v#{version}/AgentSessions-#{version}.dmg",
-      verified: "github.com/jazzyalex/agent-sessions/"
+  url "https://github.com/jazzyalex/agent-sessions/releases/download/v#{version}/AgentSessions-#{version}.dmg"
   name "Agent Sessions"
   desc "Unified session browser for Codex CLI, Claude Code, Gemini CLI, and OpenCode (read-only)"
   homepage "https://jazzyalex.github.io/agent-sessions/"
